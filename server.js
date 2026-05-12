@@ -9,7 +9,7 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-const PORT = process.env.PORT || 3000;
+
 
 
 
@@ -50,6 +50,7 @@ app.get("/tasks/:user_id", async (req, res) => {
   res.json(result.rows);
 });
 
-app.listen(process.env.PORT, () => {
-  console.log("Server running 🚀");
+app.listen(PORT, () => {
+  console.log(`Server running on port 🚀 ${PORT}`);
 });
+
